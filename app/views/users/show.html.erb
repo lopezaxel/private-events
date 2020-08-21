@@ -1,2 +1,6 @@
-<h1><%= @user.name.capitalize %> profile</h1>
-<p>Email: <%= @user.email %></p>
+<h1><%= current_user.name.capitalize %> profile</h1>
+<p>Email: <%= current_user.email %></p>
+<h2>Created events:</h2>
+<% current_user.created_events.each do |event| %>
+  <%= link_to event.description, event_path(event) %><br />
+<% end %>
