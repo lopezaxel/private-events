@@ -1,24 +1,5 @@
-# README
+# Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a page similar to [Eventbrite](http://www.eventbrite.com/) which allows users to register, create events, attend events and send invitations.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+In this project I am working specifically with Rails associations and relationships. A project from [The Odin Project](https://www.theodinproject.com/lessons/associations).
