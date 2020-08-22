@@ -6,7 +6,12 @@
   <%= link_to event.description, event_path(event) %><br />
 <% end %>
 
-<h2>Attended events:</h2>
-<% @user.attended_events.each do |event| %>
+<h2>Previously attended events:</h2>
+<% @user.attended_events.where("date <= ?", Date.today).each do |event| %>
+  <%= link_to event.description, event_path(event) %>
+<% end %>
+
+<h2>Upcoming events:</h2>
+<% @user.attended_events.where("date > ?", Date.today).each do |event| %>
   <%= link_to event.description, event_path(event) %>
 <% end %>
