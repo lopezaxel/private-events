@@ -5,4 +5,9 @@ class Event < ApplicationRecord
 
   scope :past, -> { where("date <= ?", Date.tomorrow) }
   scope :upcoming, -> { where("date > ?", Date.tomorrow) }
+
+  def is_user_invitated?(user)
+    events_id = user.invited.split(",").map { |id| id.to_i }
+    events_id.include?(self.id)
+  end
 end
